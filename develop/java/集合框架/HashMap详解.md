@@ -122,7 +122,7 @@
     }
     ```
 
-- 哈希桶数组**table[]**中的Node数据类型：链表 or 红黑树
+- 哈希桶数组**table[]** 中的Node数据类型：链表 or 红黑树
 
     ```java
     // 链表
@@ -239,7 +239,7 @@
 
     ![put方法示意图](https://images.cnblogs.com/cnblogs_com/houhou929/1561921/o_hashmap-put.png)
 
-    注意``tab[i = (n - 1) & hash]``用来确认插入的新Node在哈希桶**table[]**中的index（后面详解）
+    注意``tab[i = (n - 1) & hash]``用来确认插入的新Node在哈希桶**table[]** 中的index（后面详解）
 
     ```java
             /**
@@ -410,7 +410,7 @@
 
 ### Why HashMap insert new Node on index (n - 1) & hash?
 
-1. 任何HashMap中的哈希桶数组**table[]**有``size = 2 ^ n(n >= 0)``
+1. 任何HashMap中的哈希桶数组**table[]** 有``size = 2 ^ n(n >= 0)``
 
    ```java
    //这个方法可以保证大小一定是 2的n次幂
