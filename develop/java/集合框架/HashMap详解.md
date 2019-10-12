@@ -439,14 +439,10 @@
        n |= n >>> 16;   0 0 0 0 | 0 1 1 1 = 0 1 1 1 = 7
        return n + 1     7 + 1 = 8 
     ```
-
-
+    
        table的size = 8
-    
        新节点的index计算为：``Node<K,V> p =  tab[i = (n - 1) & hash];`` n=8
-    
        模运算方式：``Node<K,V> p =  tab[i = hash % n];``
-    
        这里就将**取模**转换成了**两数相&**  ``hash % n == (n-1) & hash``
 
 
