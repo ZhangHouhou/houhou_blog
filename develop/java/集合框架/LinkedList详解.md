@@ -4,7 +4,7 @@
 
 - 实现了什么接口
 
-  - List、Deque 和 抽象类AbstractSequentialList
+  - List、Deque（即能将LinkedList当作双端队列使用） 和 抽象类AbstractSequentialList
   - Cloneable
   - Serializable
 - 核心内容
@@ -12,8 +12,8 @@
   - **LinkedList 底层是基于双向链表实现的**，也是实现了 List 接口，所以也拥有 List 的一些特点 (JDK1.7/8 之后取消了循环，修改为双向链表) 
 - 优缺
 
-  - **不**支持随机访问
-  - LinkedList 在任意位置添加删除元素更快
+  - **不**支持随机访问（get()方法是分半遍历链表查找的）
+  - LinkedList 在任意位置添加删除元素更搞笑
   - 查找需要进行遍历查询，效率较低。
   - 继承了Deque类，可以提供stack和queue的功能，但是关于栈或队列，现在的首选是 ArrayDeque，它有着比 LinkedList （当作栈或队列使用时）有着更好的性能
 - JDK的描述
